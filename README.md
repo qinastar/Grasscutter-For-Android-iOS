@@ -4,7 +4,35 @@ YuiServer
 
 如果你有时间，可以帮忙排版一下，当然也可以增加个English页面
 
+文档内有图片，实在不懂的看视频教程。
+
+服务器设置如下：
+在服务器上安装打开Fiddler，Tools里面勾选解密HTTPS，端口随意，允许其他设备链接。
+在脚本页面设置：
+导出你的证书。
+
+/* Original script by NicknameGG, modified for Grasscutter by contributors. */
+import System;
+import System.Windows.Forms;
+import Fiddler;
+import System.Text.RegularExpressions;
+
+class Handlers
+{
+    static function OnBeforeRequest(oS: Session) {
+        if(oS.host.EndsWith(".yuanshen.com") || oS.host.EndsWith(".hoyoverse.com") || oS.host.EndsWith(".mihoyo.com")|| oS.host.EndsWith(".mob.com")) {
+            oS.host = "127.0.0.1"; // 这个可以更改为你服务端程序所在IP
+        }
+    }
+};
+
+//tips:fiddler所在服务器不需要和你的服务端在一起，这意味着你可以设置多台服务器来转发！
+
+然后把证书发给你的手机或者群友，接着按着如下操作即可：
+
+
 ---------------以下是我所搭建的服务器，如果你不想搭建可以来体验！---------------
+  
 【星悦梦璃】
 更为强大的高防高配置服务器，以后将成为主力服务器，建议游玩此服务器。禁止权限！此服务器长期开放，欢迎长期入驻哦~
 手机专用分流服务器1：
