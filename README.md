@@ -1,77 +1,42 @@
 # Grasscutter-For-Android-iOS
 YuiServer
-完全的复制粘贴，原文档链接：https://docs.qq.com/doc/DVkhpV1BpZUdaaUNJ
+完全的复制粘贴，原文档链接：https://yuina.cn/yuiserver
 
 如果你有时间，可以帮忙排版一下，当然也可以增加个English页面
 
 文档内有图片，实在不懂的看视频教程。
 
-服务器设置如下：
-在服务器上安装打开Fiddler，Tools里面勾选解密HTTPS，端口随意，允许其他设备链接。
-在脚本页面设置：
-导出你的证书。
-
-/* Original script by NicknameGG, modified for Grasscutter by contributors. */
-import System;
-import System.Windows.Forms;
-import Fiddler;
-import System.Text.RegularExpressions;
-
-class Handlers
-{
-    static function OnBeforeRequest(oS: Session) {
-        if(oS.host.EndsWith(".yuanshen.com") || oS.host.EndsWith(".hoyoverse.com") || oS.host.EndsWith(".mihoyo.com")|| oS.host.EndsWith(".mob.com")) {
-            oS.host = "127.0.0.1"; // 这个可以更改为你服务端程序所在IP
-        }
-    }
-};
-
-//tips:fiddler所在服务器不需要和你的服务端在一起，这意味着你可以设置多台服务器来转发！
-
-然后把证书发给你的手机或者群友，接着按着如下操作即可：
-
-
----------------以下是我所搭建的服务器，如果你不想搭建可以来体验！---------------
-  
-【星悦梦璃】
-更为强大的高防高配置服务器，以后将成为主力服务器，建议游玩此服务器。禁止权限！此服务器长期开放，欢迎长期入驻哦~
-手机专用分流服务器1：
-IP：ys1.yuina.cn  手机端口：8888  
-手机专用分流服务器2：
-IP：ys2.yuina.cn  手机端口：8888  
-//所有分流服务器都将连接到【星悦梦璃】
-//分流服务器的作用是缓解手机玩家卡登录，如果你卡登录可以尝试其他分流。
-//分流服务器需要安装不同的证书哦，不通用！
-
-PC端专用IP：ys.yuina.cn  端口：22102
-//此服务器已被加固防御，如果长时间在登录界面提示连接中，说明正在排队中，请耐心等待。
-//进入游戏后请及时关闭代理，长时间使用代理可能被系统拉黑IP
-
-2服：指令服
-《转生到异世界结果惨遭重生之我是宙斯2：诸神之战大结局番外篇之炸服高手》
-开放权限，无管理模式，其混乱程度堪比2b2t，基本来说10分钟炸一次服  
-IP：124.223.216.60 手机端口：30000  PC端口：22102
-由于开放权限，会有很多人炸服，为了防止服务器被指令关闭，每1小时重启一次
-
----------------以上是我所搭建的服务器，如果你不想搭建可以来体验！---------------
-
-
-
-PC进入视频教程：https://www.bilibili.com/video/BV1wi4y1U7nq/
-Android/iOS进入视频教程：https://www.bilibili.com/video/BV1GZ4y1y7D7/
-
-
-请把你的账号设置较难且较长，服务器目前不支持密码功能！
-
-使用须知：
-本教程只负责如何进入，均为网络搜寻，不代表本人是作者。请在下载后的24小时内删除！
-完全按照本文档可100%进入游戏，如果你进不去请仔细阅读重新按照教程操作！
-文档不定期更新，建议收藏或加入受到认证的YuiServer QQ群讨论：
-1群：744197295（满）  2群：687040441（满） 3群：825329263（可申请）
 
 
 安卓客户端：
-Android/iOS进入视频教程：https://www.bilibili.com/video/BV1GZ4y1y7D7/
+Android进入视频教程&旧版本资源包转换：https://www.bilibili.com/video/BV1QY4y1r7wU/
+
+无Root:
+你不再需要安装证书，不再需要设置代理，让我们FUCK OF PROXY!
+
+链接：https://www.123pan.com/s/WVjA-u7MiH
+
+下载新版本客户端，先打开游戏选择官方服务器更新游戏（大约13G）
+
+//如果没弹窗，请重开游戏
+
+更新完毕后，退出游戏，输入服务器IP链接，点击自定义服务器，即可登录！
+
+
+教程到此结束，就这么简单。
+
+有Root/Lsposed:
+链接：https://www.123pan.com/s/WVjA-u7MiH
+
+下载Xposed模块，激活
+
+打开游戏选择官方服务器更新游戏（大约13G）
+
+更新完毕后，退出游戏，输入服务器IP链接，点击自定义服务器，即可登录
+
+
+老的证书进入方法
+安卓客户端：
 首先下载安装以下链接内的官方客户端和代理证书
 //提醒：如果你不使用链接内的客户端，那么你就会提示资源错误
 链接：https://www.123pan.com/s/WVjA-u7MiH
@@ -113,26 +78,7 @@ Android/iOS进入视频教程：https://www.bilibili.com/video/BV1GZ4y1y7D7/
 一直开着代理，你的网络都会走服务器，你的手机和服务器都很累
 删了代理可减少延迟，并且恢复部分软件无法联网。
 还可以减轻服务器负担！
----------
-PC客户端：
-PC进入视频教程：https://www.bilibili.com/video/BV1wi4y1U7nq/
-提示:电脑只需要下载连接器连接就能进入，不需要安装证书，不需要下载国际服客户端简单无脑，直接使用你已经安装好的国服
 
-1. 下载安装【服务器连接器】
-链接：https://www.123pan.com/s/WVjA-u7MiH
-
-安装好PC客户端官方客户端并且更新完毕
-
-解压 米哈游代理转向.7z  
-管理员身份打开 【米哈游代理转向.exe 】
-
-设置服务器IP：请查看置顶服务器列表
-端口为：22102
-//PC版本端口不会改变，请一直保持22102
-点击开启代理
-//提示：本软件可能会和你的加速器、VPN、翻墙软件冲突，请先关闭
-启动游戏即可！
-随便输入账号密码即可注册哦！
 
 iOS客户端：
 经过反馈，iOS可以正常进入
@@ -143,10 +89,6 @@ wifi设置代理
 和安卓类似操作
 即可进入游戏
 
-问题解答&关于项目
-//本项目Github地址： https://github.com/qinastar/YuiServer/
-//如果你需要自己搭建服务器，请参考项目内的指南文件
-//YuiServer JAR Download   提取码：yuki
 
 Q：登陆的时候提示网络错误
 A：99%为你没有正确按照教程安装，检查你的证书或者端口设置！当然也可能是服务器转发繁忙中，只有手机用户会出现这个问题，PC出现这个问题就是服务器关闭了。
